@@ -1,0 +1,407 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+body{
+  color: white;
+  background-color: black;
+}
+
+/*--------------------navigation bar css---------------------------*/
+
+nav {
+  width:100%;
+  display: flex;
+  justify-content: right;
+  align-items: center; 
+  font-family:'Times New Roman', Times, serif;
+  position:fixed;
+  padding: 10px;
+  background-color: black;
+}
+a{
+  animation: slideTop 2s ease-in-out forwards;
+}
+
+
+@keyframes slideTop {
+  from {
+      transform: translateY(-100%);
+  }
+  to {
+      transform: translateY(0);
+  }
+}
+.logo{
+  justify-self: left;
+  text-decoration: none;
+  padding-right:400px;
+}
+h3{
+  color:white;
+  font-size: 35px;
+}
+#letter-color{
+  color: rgb(255, 2, 133);
+}
+
+nav ul{
+  float:right;
+  animation: slideTop 2s ease-in-out forwards;
+}
+
+nav ul li{
+  display:inline-block;
+  padding:0px 25px 0 0;
+  list-style: none;
+}
+
+nav ul li a{
+  text-decoration: none;
+  padding:7px 8px;
+  font-weight:bold;
+  color: white;
+  animation: moveDiagonal 2s ease-in-out forwards;
+}
+.loginBtn{
+  border:1.5px solid rgb(255, 2, 133);
+  border-radius: 20px;
+}
+.loginBtn:hover{
+  background-color:rgb(255, 2, 133);
+  color: black;
+  text-decoration: none;
+}
+
+nav ul li a:hover{
+  cursor: pointer;
+  color:rgb(255, 2, 133);
+  text-decoration:underline rgb(255, 2, 133);;
+
+}
+
+/*--------------------home css---------------------------*/
+
+.homecls{
+  width:100%;
+  height:90vh;
+}
+
+#homeimg{
+  margin:30px;
+  opacity: 0;
+  animation: fadeSlideRight 2s ease-in-out forwards;
+  transition: border-color 0.5s;
+  
+}
+#homeimg:hover{
+  border-color: rgb(255, 2, 133);
+}
+@keyframes fadeSlideRight {
+  from {
+      transform: translateX(100%);
+      opacity: 0;
+  }
+  to {
+      transform: translateX(0);
+      opacity: 1;
+  }
+}
+
+#name {
+  width:100%;
+  height:60vh;
+  margin:20px;
+  animation: slideLeft 2s ease-in-out forwards;
+}
+@keyframes slideLeft {
+  from {
+      transform: translateX(-100%);
+  }
+  to {
+      transform: translateX(0);
+  }
+}
+
+#name h1{
+  display: flex;
+  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  text-align:left;
+  color:rgb(255, 2, 133);
+  font-size: 45px;
+  padding:100px 20px 25px 50px;
+  
+}
+#name p{
+  font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  letter-spacing: 1px;
+  font-size: 40px;
+  font-weight: bolder;
+  text-align:left;
+  padding-left:50px;
+}
+.btn{
+  display:flex;
+  margin: 60px 0 0 50px;
+  color:white;
+  background-color: #000;
+  font-size: 16px;
+  padding: 12px 20px;
+  border: 2px solid rgb(255, 2, 133);
+  cursor: pointer;
+  border-radius: 5px;
+  text-align: center;
+  font-weight: bold;
+  
+}
+#regBtn{
+  text-decoration: none;
+}
+
+.btn:hover{
+    background-color: rgb(255, 2, 133);
+    transition: 0.5s ease-in;
+    color: white;
+    text-decoration: underline;
+}
+.container-home{
+  display: grid;
+  grid-template-columns: 1fr 1fr; /* Two columns layout */
+  gap: 0px; /* Gap between grids */
+  width: auto; /* Limiting container width */
+  margin: 0 auto; /* Centering container */
+  padding: 20px;
+}
+
+/*--------------------about css---------------------------*/
+
+.about {
+  width:100%;
+  height:90vh;
+}
+h1{
+  padding-top: 100px;
+  font-size: 35px;
+}
+
+.imagefit{
+  width: 80px; 
+  height: 70px; 
+  border-radius: 50%;
+  object-fit: cover; 
+  display: flex;
+  justify-self: left; 
+}
+.containerabt {
+  display: grid;
+  grid-template-columns: 1fr 2fr; /* Two columns layout */
+  gap: 0px; /* Gap between grids */
+  width: auto; /* Limiting container width */
+  margin: 0 auto; /* Centering container */
+  padding: 20px;
+}
+.textabt {
+  padding: 20px 0 0 0;
+  text-align: left;
+}
+
+.imageabt {
+  text-align: center;
+  padding-top:100px;
+}
+
+.imageabt img {
+  border:5px;
+  border-style: solid;
+  border-radius: 50%;
+  border-color:rgb(255, 2, 133);
+  
+}
+p{
+  line-height: 25px;
+}
+
+/*--------------------skills css---------------------------*/
+
+.skills-cls{
+  height: 100vh;
+  width: 100%;
+}
+#skill-box{
+  background-color:#1f1e1e;
+  width:80%;
+  height: 100vh;
+  margin:150px 0 0 130px;
+
+}
+.heading2{
+  display: flex;
+  align-content: center;
+  justify-content: center;
+  padding-top: 70px;
+  text-decoration: underline;
+  font-size: 35px;
+}
+.container-skill{
+  display: grid;
+  grid-template-columns: 1fr 1fr; /* Two columns layout */
+  gap: 150px; /* Gap between grids */
+  width: 80%; /* Limiting container width */
+  margin: auto; /* Centering container */
+  padding: 50px;
+  height: auto;
+}
+.container-skill h2{
+  color:rgb(255, 2, 133);
+}
+.text-skill{
+  padding-top:10px;
+  text-align: center;
+}
+.text-grid-skill, .image-grid-skill {
+  
+  background-color:#000;
+}
+.image-skill {
+  text-align: center;
+  padding-top:20px;
+}
+
+.text-skill ul li{
+  list-style:none;
+}
+.image-skill ul li{
+  list-style:none;
+}
+
+
+/*---------------------projects css---------------------------------*/
+.project-cls{
+  height: 150vh;
+  width:100%;
+}
+.heading3{
+  padding:0 0 30px 550px;
+  font-size: 45px;
+  text-decoration: underline;
+}
+.projects-box {
+  display: grid;
+  grid-template-rows: auto auto; /* Two rows of automatic height */
+  gap: 10px; /* Optional: Add space between rows */
+}
+
+.item1, .item2{
+  display: grid;
+  grid-template-columns: 1fr 2fr; /* Two columns layout */
+  gap: 10px; /* Gap between grids */
+  width: 80%; /* Limiting container width */
+  margin-left:120px; /* Centering container */
+  background-color: #313133;
+  border: 1px solid rgb(255, 2, 133);
+  border-radius: 20px;
+}
+
+.image-project img{
+  padding: 20px;
+}
+
+.text-project{
+  text-align: left;
+  padding: 0;
+  margin: 0;
+}
+.realestate{
+  padding: 20px 0 20px 0;
+}
+
+.abt-prjt{
+  line-height: 30px;
+}
+
+/*---------------------contact---------------------*/
+
+.contact-cls{
+  width: 100%;
+  height: 100vh;
+  margin-top: 100px;
+}
+
+.row{
+  display: grid;
+  grid-template-columns: 1fr 1fr; /* Two columns layout */
+  gap: 20px; /* Gap between grids */
+  width: auto; /* Limiting container width */
+  
+}
+.contact-left{
+  margin: 50px 0 0 100px;
+}
+.contact-left h1 span{
+  color: rgb(255, 2, 133);
+  font-size:larger;
+}
+.contact-left p{
+  font-size: larger;
+  font-weight: 500;
+}
+
+.cv-btn{
+  color:white;
+  background-color: rgb(255, 2, 133);
+  padding:10px 20px;
+  text-decoration: none;
+  border-radius: 5px;
+  margin-top: 100px;
+}
+.cv-btn:hover{
+  text-decoration: underline;
+}
+.contact-right{
+  margin:100px 50px 0 0;
+}
+
+
+form input, form textarea{
+  width: 100%;
+  border:0;
+  outline:none;
+  background-color: #1f1f1f;
+  padding: 15px;
+  margin:10px;
+  color: white;
+  font-size: 18px;
+  border-radius: 5px;
+}
+form .submit-btn{
+  padding: 14px 60px;
+  font-size: 18px;
+  margin: 20px 0 0 10px;
+  background-color: rgb(255, 2, 133);
+  border-radius: 5px;
+  cursor: pointer;
+
+}
+form .submit-btn:hover{
+  color:white;
+}
+
+
+
+
+/*---------------------contact---------------------*/
+
+
+
+footer{
+  height:20vh;
+  background-color: #1f1f1f;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
